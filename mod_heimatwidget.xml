@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2" client="site" method="upgrade">
+	<name>Heimatwidget</name>
+	<author>mttronc</author>
+	<creationDate>January 2016</creationDate>
+	<copyright>Copyright (C) mttronc 2016</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<version>0.1</version>
+	<description>Modul zum Einbetten von Myheimat-Beiträgen</description>
+	<files>
+		<folder>tmpl</folder>
+		<filename module="mod_heimatwidget">mod_heimatwidget.php</filename>
+		<filename>helper.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="links" type="textarea" default="" label="Urls zu den Beiträgen" description="Mehrere Urls durch Zeilenumbruch trennen." rows="10" cols="150" />
+				<field name="width" type="integer" default="450" label="Breite (Pixel)" description="" first="300" last="800" step="10" />
+				<field name="color_bg" type="color" default="#ffffff" label="Hintergrundfarbe" description="" />
+				<field name="color_border" type="color" default="#bbbbbb" label="Rahmenfarbe" description="" />
+				<field name="color_font" type="color" default="#111111" label="Schriftfarbe" description="" />
+			</fieldset>
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="extension" name="Heimatwidget Updates">https://raw.githubusercontent.com/mttronc/joomla_mod_heimatwidget/master/update.xml</server>
+	</updateservers>
+</extension>
