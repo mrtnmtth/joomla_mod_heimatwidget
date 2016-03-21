@@ -13,12 +13,19 @@ if (!$articles)
 {
   echo '<span class="label label-important">Keine Beträge gefunden.</span>';
 }
+
 $width = $params->get('width','450') - 12;
+if ($params->get('fluidwidth','0'))
+{
+  $width = 'max-width: ' . $width . 'px;';
+} else {
+  $width = 'width: ' . $width . 'px;';
+}
 ?>
 <style>
 .heimatwidget
 {
-  width: <?php echo $width; ?>px;
+  <?php echo $width; ?>
   padding: 5px;
   font-family: Arial, 'Nimbus Sans L', sans-serif;
   font-size: 12px;

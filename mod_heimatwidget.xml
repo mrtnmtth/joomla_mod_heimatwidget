@@ -17,6 +17,10 @@
 			<fieldset name="basic">
 				<field name="links" type="textarea" default="" label="Urls zu den Beiträgen" description="Mehrere Urls durch Zeilenumbruch trennen." rows="10" cols="150" />
 				<field name="width" type="integer" default="450" label="Breite (Pixel)" description="" first="300" last="800" step="10" />
+				<field name="fluidwidth" type="radio" default="0" label="variable Breite" description="Breite wird an das übergeordnete Element angepasst, dabei wird obige Breite als Höchstbreite angenommen.">
+					<option value="0">Nein</option>
+					<option value="1">Ja</option>
+				</field>
 				<field name="color_bg" type="color" default="#ffffff" label="Hintergrundfarbe" description="" />
 				<field name="color_border" type="color" default="#bbbbbb" label="Rahmenfarbe" description="" />
 				<field name="color_font" type="color" default="#111111" label="Schriftfarbe" description="" />
