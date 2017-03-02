@@ -28,7 +28,7 @@ class ModHeimatwidgetHelper
 			$article->id = preg_replace('/\D/', '', strrchr($url, '-d'));
 			// continue with next item if no id can be determined
 			if (!$article->id) continue;
-			$article->ajax = 'http://www.myheimat.de/ajax/widgets/action/loadjs/'
+			$article->ajax = 'https://www.myheimat.de/ajax/widgets/action/loadjs/'
 				.'generateWidget/?widget_width='.$width.'&widget_colorBorder='
 				.trim($color_border, '#').'&widget_colorFont='.trim($color_font, '#')
 				.'&widget_type=document&meta_document='.$article->id;
