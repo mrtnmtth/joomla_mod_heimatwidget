@@ -28,6 +28,10 @@
 				<field name="color_bg" type="color" default="#ffffff" showon="css:0" label="Hintergrundfarbe" description="" />
 				<field name="color_border" type="color" default="#bbbbbb" showon="css:0" label="Rahmenfarbe" description="" />
 				<field name="color_font" type="color" default="#111111" showon="css:0" label="Schriftfarbe" description="" />
+				<field name="img_pull" type="radio" class="btn-group" default="left" showon="css:1" label="Bild-Ausrichtung" description="">
+					<option value="left">Links</option>
+					<option value="right">Rechts</option>
+				</field>
 			</fieldset>
 		</fields>
 	</config>

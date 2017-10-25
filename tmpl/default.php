@@ -52,7 +52,8 @@ if ($params->get('fluidwidth','0'))
       jQuery(this).find('div>div').remove();
       jQuery(this).prepend(a);
       jQuery(this).addClass('media');
-      jQuery(this).find('a.pointer').addClass('pull-left');
+      jQuery(this).find('a.pointer')
+        .addClass('pull-<?php echo $params->get('img_pull','left'); ?>');
       jQuery(this).find('a.pointer>img').addClass('media-object');
       jQuery(this).find('div').first().addClass('media-body');
       jQuery(this).find('h3').addClass('media-heading');
