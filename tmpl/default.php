@@ -48,6 +48,8 @@ if ($params->get('fluidwidth','0'))
     jQuery('.heimatwidget').find('*').removeAttr('style');
     jQuery('.heimatwidget').each(function() {
       var a = jQuery(this).find('a.pointer').detach();
+      var h = jQuery(this).find('h3>a').detach();
+      jQuery(this).find('h3').remove();
       jQuery(this).find('.mediadbgalleryfloat').remove();
       jQuery(this).find('div>div').remove();
       jQuery(this).prepend(a);
@@ -56,7 +58,9 @@ if ($params->get('fluidwidth','0'))
         .addClass('pull-<?php echo $params->get('img_pull','left'); ?>');
       jQuery(this).find('a.pointer>img').addClass('media-object');
       jQuery(this).find('div').first().addClass('media-body');
-      jQuery(this).find('h3').addClass('media-heading');
+      jQuery(this).find('div').first().prepend(h);
+      jQuery(jQuery(this).find('div>a').contents()).wrap('<h4></h4>');
+      jQuery(this).find('h4').addClass('media-heading');
       jQuery(jQuery(this).find('div').first().contents().eq(3))
         .wrap('<p style="line-height: 15px; text-align: justify;"></p>');
       jQuery(jQuery(this).find('div').last().contents()).wrap('<b></b>');
