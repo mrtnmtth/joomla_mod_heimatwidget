@@ -27,13 +27,9 @@ if ($params->get('fluidwidth','0'))
 {
   <?php echo $width; ?>
   padding: 5px;
-  font-family: Arial, 'Nimbus Sans L', sans-serif;
-  font-size: 12px;
   color: <?php echo $params->get('color_font','#111111'); ?>;
   background-color: <?php echo $params->get('color_bg','#ffffff'); ?>;
   border: 1px solid <?php echo $params->get('color_border','#bbbbbb'); ?>;
-  line-height: 15px;
-  overflow: hidden;
 }
 </style>
 <?php foreach($articles as $article) : ?>
