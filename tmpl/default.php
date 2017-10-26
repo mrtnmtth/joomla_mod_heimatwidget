@@ -10,17 +10,14 @@
 defined('_JEXEC') or die;
 
 if (!$articles)
-{
   echo '<span class="label label-important">Keine Beträge gefunden.</span>';
-}
 
 $width = $params->get('width','450') - 12;
-if ($params->get('fluidwidth','0'))
-{
+if ($params->get('fluidwidth','0')):
   $width = 'max-width: ' . $width . 'px;';
-} else {
+else:
   $width = 'width: ' . $width . 'px;';
-}
+endif;
 ?>
 <style>
 .heimatwidget
