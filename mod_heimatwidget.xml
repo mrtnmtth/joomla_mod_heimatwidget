@@ -32,6 +32,10 @@
 					<option value="left">Links</option>
 					<option value="right">Rechts</option>
 				</field>
+				<field name="fixedheight" type="radio" class="btn-group btn-group-yesno" default="1" showon="css:1" label="Textlänge entsprechend Bildhöhe" description="Textlänge begrenzen, sodass der Textblock nicht höher als das Bild ist.">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 			</fieldset>
 		</fields>
 	</config>

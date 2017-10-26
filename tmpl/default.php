@@ -63,6 +63,17 @@ if (!$articles)
       jQuery(jQuery(this).find('div').first().contents().eq(3))
         .wrap('<p style="line-height: 15px; text-align: justify;"></p>');
       jQuery(jQuery(this).find('div').last().contents()).wrap('<b></b>');
+
+      <?php if ($params->get('fixedheight','1')): ?>
+        var height = jQuery(jQuery(this).find('a.pointer>img')).height() + 10;
+        var div = jQuery(this).find('.media-body');
+        var text = jQuery(div).find('p').text().split(' ');
+        jQuery(div).attr('style', 'height: ' + height + 'px;');
+        while (div.prop('scrollHeight') > div.height()) {
+          text.pop();
+          jQuery(div).find('p').html(text.join(' ') + '...');
+        }
+      <?php endif; ?>
     });
   </script>
 <?php endif; ?>
