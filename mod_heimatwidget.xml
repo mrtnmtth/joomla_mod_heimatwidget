@@ -5,7 +5,7 @@
 	<creationDate>October 2017</creationDate>
 	<copyright>Copyright (C) mttronc 2016-2017</copyright>
 	<license>GNU General Public License version 2 or later</license>
-	<version>0.3</version>
+	<version>0.4</version>
 	<description>Modul zum Einbetten von Myheimat-Beiträgen</description>
 	<files>
 		<folder>tmpl</folder>
